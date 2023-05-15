@@ -668,9 +668,19 @@ section {
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
+.contact .info .locate:hover i,
 .contact .info .phone:hover i {
   background: #24b7a4;
   color: #fff;
+}
+
+.contact .info .maps iframe {
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 30px;
+  /* width: 100%;
+  height: 500%; */
+  border: 0;
 }
 
 .contact .php-email-form {
