@@ -38,27 +38,28 @@
   <!-- Favicons -->
   <link href="assets/img/Rotaract Branding Kit/Asset 1@3x.png" rel="icon">
   <link href="assets/img/Rotaract Branding Kit/Asset 1@3x.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+    <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-* Updated: May 15 2023
-* Author: Samarth Viswanath
-  ======================================================== -->
-
-</head>
-
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQT9STLJEJ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -68,147 +69,326 @@
   gtag('config', 'G-YQT9STLJEJ');
 </script>
 
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Updated: Jun 13 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
 <body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex flex-column align-items-center">
-      <div class="logo">
-        <!-- <h1 class="text-light"><a href="index.html"><span></span></a></h1> -->
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="assets/img/Rotaract Branding Kit/RCJPN - Logo - Full Color@3x 2 (4).png" alt=""
-            class="img-fluid"></a>
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About Us</span></a></li>
+        <li><a href="aboutus.html" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Our Theme</span></a></li>
+        <li><a href="team.html" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span> The Team</span></a></li>
+        <li><a href="comingsoon.html" class="nav-link scrollto"><i class="bx bx-book-content"></i><span>Our Archives</span></a></li>
+        
+        <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Welcome to Rotaract Club Of Bangalore JP Nagar</h1>
+      <p>We are <span class="typed" data-typed-items="Community, Fun, Rotaract"></span></p>
+      <div class="social-links">
+        <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+        <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+        <a href="https://www.instagram.com/rotaract_jpnagar/?hl=en" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+        <a href="https://www.linkedin.com/company/rotaract-club-jp-nagar/about/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
-  </header><!-- End #header -->
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex flex-column align-items-center">
-
-
-      <h1>Welcome to Rotaract Club of Bangalore JP Nagar</h1>
-      <h2>We're working hard to improve our website and we'll be ready to launch after</h2>
-      <div class="countdown d-flex justify-content-center" data-count="2023/7/01">
-        <div>
-          <h3>%d</h3>
-          <h4>Days</h4>
-        </div>
-        <div>
-          <h3>%h</h3>
-          <h4>Hours</h4>
-        </div>
-        <div>
-          <h3>%m</h3>
-          <h4>Minutes</h4>
-        </div>
-        <div>
-          <h3>%s</h3>
-          <h4>Seconds</h4>
-        </div>
-      </div>
-
-
-
-      <div class="social-links text-center">
-        <h2>Be a part of an amazing journey filled with service, growth and fellowship.We, the Rotaract Club of
-          Bangalore JP Nagar, are set to welcome all the enthusiastic individuals!To join click the icon below
-        </h2>
-        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a> -->
-        <a href="https://forms.gle/ntSXAZ1jxuy3tGi37" class="instagram"><i
-            class="bi bi-link"></i></a>
-        <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
-      </div>
-
-    </div>
-  </header><!-- End #header -->
+  </section><!-- End Hero -->
 
   <main id="main">
 
-    <!-- ======= About Us Section ======= -->
+    <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
+
         <div class="section-title">
           <h2>About Us</h2>
-          <p>On June 17th, 2021, annets of Rotary JP Nagar and their friends took the first step towards forming a team
-            for Rotaract Club of Bangalore JP Nagar. Sponsored by Rotary JP Nagar, we, RaC JP Nagar, are a diverse group
-            of young professionals, students, and individuals who share a common goal of serving the community.
-
-            Through various service projects and initiatives, we bagged the Best Charter Club award in our charter year.
-            Throughout the year, we organize a wide range of activities and events that include community service
-            projects, educational programs, and fundraisers. Through our collective efforts, we strive to make a
-            meaningful impact and inspire others to join us on this journey of service. </p>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
-      </div>
-    </section><!-- End About Us Section -->
 
-    <!-- ======= Contact Us Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
+        <div class="row">
+          <div class="col-lg-1">
+            <img src="assets/img/Rotaract Branding Kit/Asset 1@3x.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-11 pt-2 pt-lg-0 content">
+            <h3>Rotaract Club Of Bangalore JP Nagar.</h3>
+            <p class="fst-italic">
+              The Rotaract Club of JP Nagar is a dynamic group of young individuals committed to making a positive
+              impact in our
+              community. Through service, leadership, and fellowship, we strive to address the needs of our community,
+              create
+              lasting change, and develop strong leaders. Join us in our mission to make a difference and leave a
+              positive impact on
+              JP Nagar and beyond.
+            </p>
+            <p>
+              Our club is comprised of enthusiastic and socially conscious members from various walks of life, including
+              students,
+              professionals, and entrepreneurs. Together, we strive to address the needs of our community through
+              impactful
+              projects, initiatives, and events.
+            </p>
+            <div class="text-left">
+              <a href="aboutus.html"><button type="submit">Know more About Us</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact Us</h2>
+          <h2>Facts</h2>
+          <p>Here are some interesting facts about Rotaract Club Of JP Nagar:</p>
         </div>
 
         <div class="row">
 
-          <div class="col-xl-20 d-flex align-items-center">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>47, 3rd Cross Road, 5th Main Rd, Jagruthi Colony, BOB Colony, Phase 7, J. P. Nagar, Bengaluru,
-                  Karnataka 560078, India</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>rotaractjpnagar@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+91 74110 81908</p>
-              </div>
-
-              <div class="locate">
-                <i class="bi bi-geo-alt-fill"></i>
-                <h4>Locate Us:</h4>
-              </div>
-
-              <div class="maps" style="display:block;align-items: center; justify-content: flex-start; ">
-
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15556.77171997371!2d77.5851146!3d12.8953125!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15a1b02a6759%3A0x924a50dacfeddaad!2sRotaract%20Club%20of%20JP%20Nagar!5e0!3m2!1sen!2sin!4v1684172018256!5m2!1sen!2sin"
-                  width="600" height="300" style="border: 100px;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-calendar-fill"></i>
+              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Years of Service</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section><!-- End Contact Us Section -->
 
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="400" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-award"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Awards</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <div class="section-title">
+      <h2>*****MORE DETAILS COMING SOON*****</h2>
+    </div>
+
+    
+
+    <!-- ======= Portfolio Section ======= -->
+    <!-- <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+            sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
+                class="portfolio-details-lightbox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div> -->
+    <!-- </section>End Portfolio Section -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Rotaract Club of Bangalore JP Nagar</span></strong>. All Rights Reserved
+      <h3>Rotaract Club Of Bangalore JP Nagar</h3>
+      <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
+      <div class="social-links">
+        <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+        <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+        <a href="https://www.instagram.com/rotaract_jpnagar/?hl=en" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+        <a href="https://www.linkedin.com/company/rotaract-club-jp-nagar/about/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
-      <div class="credits">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Rotaract Club Of JP Nagar</span></strong>. All Rights Reserved
+        <p>For more info contact Rtr Samarth Viswanath</p>
       </div>
     </div>
-  </footer><!-- End #footer -->
+  </footer><!-- End Footer -->
 
+  <div id="preloader">
+    <img src="assets/img/Rotaract Branding Kit/Rotaract-Simple_CMYK-C-removebg-preview-1.png" alt="Loading" class="preloader-img">
+  </div>
+  
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
