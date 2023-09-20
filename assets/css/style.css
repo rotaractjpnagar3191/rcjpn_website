@@ -300,6 +300,34 @@ h6 {
   position: relative;
 }
 
+.announcement-bar {
+  margin-top: -1%;
+  padding: 0px;
+  text-align: center;
+}
+
+.announcement-text {
+  margin: 0;
+  font-family:"Open Sans", sans-serif;
+  font-weight: bold;
+  color: #0d0d0d;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.moving-text {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
 /* Mobile optimization */
 @media (max-width: 768px) {
   #hero {
