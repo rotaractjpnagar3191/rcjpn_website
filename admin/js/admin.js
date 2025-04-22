@@ -1,4 +1,4 @@
-import { createClient, handleRedirectCallback, protectAdminPage } from '.\C:\Github\rcjpn_website\src\utils\auth.js';
+import { createClient, handleRedirectCallback, protectAdminPage } from './src/utils/auth.js';
 
 window.onload = async () => {
   // Initialize Auth0 client
