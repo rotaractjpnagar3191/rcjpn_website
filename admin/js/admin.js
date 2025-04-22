@@ -1,3 +1,4 @@
+console.log("✅ admin.js started");
 import { createClient, handleRedirectCallback, protectAdminPage } from './src/utils/auth.js';
 
 window.onload = async () => {
