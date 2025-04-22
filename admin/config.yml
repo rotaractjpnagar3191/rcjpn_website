@@ -1,17 +1,18 @@
 backend:
   name: git-gateway
-  login: auth0
-  repo: lonewolf1005/rcjpn_website # your GitHub repo
+  branch: main # or master based on your repo
+  identity_url: https://rotaractjpnagar.netlify.app/.netlify/identity
+  gateway_url: https://rotaractjpnagar.netlify.app/.netlify/git
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: "assets/uploads" # optional, or wherever your images go
+public_folder: "/assets/uploads"
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "content/posts"
+    folder: "_posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
