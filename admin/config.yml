@@ -1,13 +1,9 @@
 backend:
-  name: auth0
-  auth0_client_id: gOkL9d9uCAFwwvmWvf1XqVeufsIf9Zvn
-  auth0_domain: dev-kfgv1dzwf74ewm8f.us.auth0.com
-  auth0_redirect_uri: https://rotaractjpnagar.netlify.app/admin/
-  identity_url: https://rotaractjpnagar.netlify.app/.netlify/identity
-  identity_management_url: https://rotaractjpnagar.netlify.app/.netlify/identity
+  name: git-gateway
+  branch: main
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "site/assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
 collections:
   - name: "posts"
