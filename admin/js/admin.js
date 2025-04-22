@@ -3,5 +3,5 @@ import { createClient, handleRedirectCallback, protectAdminPage } from './src/ut
 window.onload = async () => {
   await createClient();
   await handleRedirectCallback();
-  await protectAdminPage();
+  protectAdminPage();
 };

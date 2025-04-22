@@ -7,15 +7,14 @@
     <!-- Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 
-    <!-- Auth0 CDN -->
+    <!-- Auth0 SDK -->
     <script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
 
-    <!-- Your Admin Auth Script -->
-    <script type="module" src="/admin/js/src/utils/auth.js"></script> <!-- Make sure this path is correct -->
-    <script type="module" src="/admin/js/admin.js"></script> <!-- Ensure this points to your main admin.js script -->
+    <!-- Your custom Auth script -->
+    <script type="module" src="/admin/js/admin.js"></script>
   </head>
   <body>
-    <h1>Admin Dashboard</h1>
-    <p>Welcome to the protected content manager!</p>
+    <!-- Optional fallback if JS fails -->
+    <h1>Redirecting to login...</h1>
   </body>
 </html>

@@ -48,7 +48,9 @@ export const isAuthenticated = async () => {
 export const protectAdminPage = async () => {
   const authenticated = await isAuthenticated();
   if (!authenticated) {
-    login();
+    login(); // should redirect to Auth0
   }
 };
+
+
 
