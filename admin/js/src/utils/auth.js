@@ -1,5 +1,5 @@
 console.log("✅ auth.js loaded");
-import createAuth0Client from '@auth0/auth0-spa-js';
+import createAuth0Client from '../node_modules/@auth0/auth0-spa-js';
 
 // /admin/js/src/utils/auth.js
 
@@ -7,12 +7,18 @@ let auth0Client;
 
 // Initialize Auth0 Client
 export const createClient = async () => {
-  auth0Client = await window.createAuth0Client({
+  auth0Client = await createAuth0Client({
     domain: 'dev-kfgv1dzwf74ewm8f.us.auth0.com',
     client_id: 'gOkL9d9uCAFwwvmWvf1XqVeufsIf9Zvn',
-    redirect_uri: window.location.origin + '/admin/'
+    redirect_uri: window.location.origin,
   });
 };
+
+// Other functions like login, logout, etc.
+
+
+// Other functions like login, logout, etc.
+
 
 export const login = async () => {
   await auth0Client.loginWithRedirect();
