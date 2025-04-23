@@ -16,19 +16,10 @@ plugins:
   - jekyll-admin
 
 collections:
-  - name: "team"
-    label: "Team Members"
-    folder: "content/team"
-    create: true
-    slug: "{{slug}}"
+  team:
     output: true
     permalink: "/team/:name/"
-
-  - name: "projects"
-    label: "Projects"
-    folder: "content/projects"
-    create: true
-    slug: "{{slug}}"
+  projects:
     output: true
     permalink: "/projects/:title/"
 
