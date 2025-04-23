@@ -1,11 +1,10 @@
 backend:
   name: github
-  repo: rotaractjpnagar3191/rcjpn_website
-  branch: main
+  repo: rotaractjpnagar3191/rcjpn_website  # Replace with your GitHub repo name
+  branch: main  # The branch to use, typically "main"
 
-
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/images/uploads"  # Folder to store images in the repo
+public_folder: "/images/uploads"  # The public URL path for media
 
 collections:
   - name: "team"
