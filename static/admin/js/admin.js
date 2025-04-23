@@ -9,10 +9,10 @@ import {
 window.onload = async () => {
   // Initialize Auth0 client
   await createClient();
-  
+
   // Handle the redirect callback after Auth0 login
   await handleRedirectCallback();
-  
+
   // Protect the admin page by checking if the user is authenticated
   await protectAdminPage();
 

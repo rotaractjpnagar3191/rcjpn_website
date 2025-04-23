@@ -16,7 +16,7 @@ export const login = async () => {
 
 export const logout = () => {
   // Logout from Auth0 and redirect to the admin page
-  auth0Client.logout({ returnTo: window.location.origin + '/admin/' });
+  auth0Client.logout({ returnTo: window.location.origin + '/static/admin/' });
 };
 
 export const handleRedirectCallback = async () => {
@@ -24,7 +24,7 @@ export const handleRedirectCallback = async () => {
   if (window.location.search.includes('code=') && window.location.search.includes('state=')) {
     try {
       await auth0Client.handleRedirectCallback();
-      window.history.replaceState({}, document.title, '/admin/');
+      window.history.replaceState({}, document.title, '/static/admin/');
     } catch (error) {
       console.error('Auth0 redirect callback error:', error);
     }
