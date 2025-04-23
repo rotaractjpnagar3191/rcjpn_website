@@ -1,17 +1,30 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: rotaractjpnagar3191/rcjpn_website  # Replace with your GitHub repo name
   branch: main
 
-media_folder: "site/assets/images/uploads"
-public_folder: "/assets/images/uploads"
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "_posts"
+  - name: "team"
+    label: "Team Members"
+    folder: "content/team"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { name: "name", label: "Name", widget: "string" }
+      - { name: "role", label: "Role", widget: "string" }
+      - { name: "image", label: "Image", widget: "image" }
+      - { name: "bio", label: "Biography", widget: "text" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: "image", label: "Image", widget: "image" }

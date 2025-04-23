@@ -1,19 +1,21 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
-
-    <!-- Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-
-    <!-- Auth0 CDN -->
-    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
-
-    <!-- Admin JS (auth setup) -->
-    <script type="module" src="/admin/js/admin.js"></script>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
   </head>
   <body>
-    <div id="nc-root"></div> <!-- This is necessary -->
+    <div id="nc-root"></div> <!-- Must be visible -->
+  
+    <!-- Logout button if needed -->
+    <button id="logout-btn">Logout</button>
+  
+    <!-- Load scripts at the end of body -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
+    <script type="module" src="/admin/js/admin.js"></script>
   </body>
+  
 </html>
