@@ -1,6 +1,7 @@
 [build]
-  publish = "."  # Keep as "." if your index.html and admin folder are in the root
-  command = ""   # No build command needed for plain static site
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
 
 [dev]
   targetPort = 0  # Disable proxying to a framework dev server
