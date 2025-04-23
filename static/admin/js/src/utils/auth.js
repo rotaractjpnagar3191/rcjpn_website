@@ -5,7 +5,7 @@ export const createClient = async () => {
   auth0Client = await createAuth0Client({
     domain: 'dev-kfgv1dzwf74ewm8f.us.auth0.com',
     client_id: 'gOkL9d9uCAFwwvmWvf1XqVeufsIf9Zvn',
-    redirect_uri: window.location.origin + '/admin/' // This should match your Auth0 redirect URL
+    redirect_uri: window.location.origin + '/admin/', // This should match your Auth0 redirect URL
   });
 };
 
@@ -33,12 +33,22 @@ export const handleRedirectCallback = async () => {
 
 export const isAuthenticated = async () => {
   // Check if the user is authenticated
-  return await auth0Client.isAuthenticated();
+  try {
+    return await auth0Client.isAuthenticated();
+  } catch (error) {
+    console.error('Error checking authentication:', error);
+    return false;
+  }
 };
 
 export const getUser = async () => {
   // Retrieve the authenticated user's details
-  return await auth0Client.getUser();
+  try {
+    return await auth0Client.getUser();
+  } catch (error) {
+    console.error('Error getting user:', error);
+    return null;
+  }
 };
 
 export const protectAdminPage = async () => {

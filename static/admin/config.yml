@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: rotaractjpnagar3191/rcjpn_website  # Replace with your GitHub repo name
+  repo: rotaractjpnagar3191/rcjpn_website
   branch: main
+
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"

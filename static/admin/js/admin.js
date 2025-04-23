@@ -47,5 +47,7 @@ const loadNetlifyCMS = () => {
 
 // Trigger the Auth0 login flow
 const login = async () => {
-  await auth0Client.loginWithRedirect();
+  if (auth0Client) {
+    await auth0Client.loginWithRedirect();
+  }
 };
