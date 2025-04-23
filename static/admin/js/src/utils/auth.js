@@ -5,7 +5,7 @@ export const createClient = async () => {
   auth0Client = await createAuth0Client({
     domain: 'dev-kfgv1dzwf74ewm8f.us.auth0.com',
     client_id: 'gOkL9d9uCAFwwvmWvf1XqVeufsIf9Zvn',
-    redirect_uri: window.location.origin + '/admin/', // This should match your Auth0 redirect URL
+    redirect_uri: window.location.origin + '/static/admin/', // This should match your Auth0 redirect URL
   });
 };
 
