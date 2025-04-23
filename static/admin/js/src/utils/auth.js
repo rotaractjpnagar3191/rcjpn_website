@@ -1,26 +1,31 @@
 let auth0Client;
 
+// Function to create the Auth0 client
 export const createClient = async () => {
+  // Dynamically set the redirect URI based on environment or fallback to default
+  const redirectUri = process.env.REDIRECT_URI || window.location.origin + '/static/admin/';
+
   // Initialize the Auth0 client with your Auth0 settings
   auth0Client = await createAuth0Client({
     domain: 'dev-kfgv1dzwf74ewm8f.us.auth0.com',
     client_id: 'gOkL9d9uCAFwwvmWvf1XqVeufsIf9Zvn',
-    redirect_uri: window.location.origin + '/static/admin/'  // Removed the # fragment
+    redirect_uri: redirectUri  // Use dynamic redirect URI
   });
 };
 
+// Function to start the login flow
 export const login = async () => {
   // Start the login flow
   await auth0Client.loginWithRedirect();
 };
 
+// Function to logout from Auth0 and redirect to the admin page
 export const logout = () => {
-  // Logout from Auth0 and redirect to the admin page
   auth0Client.logout({ returnTo: window.location.origin + '/static/admin/' });
 };
 
+// Function to handle the redirect callback after the login flow
 export const handleRedirectCallback = async () => {
-  // Handle the redirect callback after the login flow
   if (window.location.search.includes('code=') && window.location.search.includes('state=')) {
     try {
       await auth0Client.handleRedirectCallback();
@@ -31,8 +36,8 @@ export const handleRedirectCallback = async () => {
   }
 };
 
+// Function to check if the user is authenticated
 export const isAuthenticated = async () => {
-  // Check if the user is authenticated
   try {
     return await auth0Client.isAuthenticated();
   } catch (error) {
@@ -41,8 +46,8 @@ export const isAuthenticated = async () => {
   }
 };
 
+// Function to retrieve the authenticated user's details
 export const getUser = async () => {
-  // Retrieve the authenticated user's details
   try {
     return await auth0Client.getUser();
   } catch (error) {
@@ -51,8 +56,8 @@ export const getUser = async () => {
   }
 };
 
+// Function to protect the admin page (ensure user is authenticated)
 export const protectAdminPage = async () => {
-  // Ensure that the user is authenticated
   const authenticated = await isAuthenticated();
   if (!authenticated) {
     // Redirect to Auth0 login if the user is not authenticated
