@@ -1,0 +1,91 @@
+/* Page header */
+.brand-center-page .page-title{
+  padding: 150px 0 60px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(0, 0, 0, .55) 100%);
+  color: #fff;
+}
+.brand-center-page .page-title h1{ font-weight: 800; }
+.brand-center-page .page-title .crumb { opacity: .8; font-size: .95rem; }
+
+/* Controls */
+.brand-controls { margin-top: .5rem; margin-bottom: .75rem; }
+.brand-controls .btn-group .btn.active{ background: var(--bs-primary); color:#fff; }
+
+/* Grid */
+.brand-grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 14px;
+}
+@media (max-width: 1199.98px){ .brand-grid{ grid-template-columns: repeat(8,1fr); } }
+@media (max-width: 767.98px){ .brand-grid{ grid-template-columns: repeat(6,1fr); } }
+@media (max-width: 575.98px){ .brand-grid{ grid-template-columns: repeat(4,1fr); } }
+
+/* Background chooser for thumbs */
+.brand-grid.bg-dark  { background:#111; }
+.brand-grid.bg-light { background:#f4f7fb; }
+.brand-grid.bg-checker{
+  background:
+    conic-gradient(#e9eef5 25%, #fff 0 50%, #e9eef5 0 75%, #fff 0) 0 0/24px 24px;
+}
+
+/* Card */
+.brand-card{
+  grid-column: span 4;
+  background:#fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+  overflow: hidden;
+  display:flex;
+  flex-direction: column;
+}
+@media (max-width: 767.98px){ .brand-card{ grid-column: span 6; } }
+@media (max-width: 575.98px){ .brand-card{ grid-column: span 12; } }
+
+.brand-card .thumb{
+  aspect-ratio: 5 / 3;
+  background:#f8f9fb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.brand-card .thumb.dark{ background:#0f1115; }
+.brand-card .thumb.neutral{ background:#f2f2f2; }
+
+.brand-card .thumb img{
+  max-width: 92%;
+  max-height: 86%;
+  width:auto;
+  height:auto;
+  object-fit: contain; /* logos should never be cropped */
+}
+
+.brand-card .meta{ padding: .85rem .95rem .25rem; }
+.brand-card .meta h3{
+  font-size: 1rem;
+  margin:0 0 .25rem;
+  font-weight: 600;
+}
+.brand-card .meta .tags{
+  margin:0;
+  font-size:.85rem;
+  color:#667085;
+}
+
+.brand-card .actions{
+  padding: .75rem .95rem 1rem;
+  display:flex;
+  gap:.5rem;
+}
+
+/* Hide cards helper */
+.brand-card.d-none { display: none !important; }
+
+/* Improve GLightbox on logos (no crop, clean bg) */
+.glightbox-clean .gslide-image img{ object-fit: contain !important; }
+
+/* Small tweak so the grid doesn’t butt up against the footer */
+.brand-center-page .section:last-of-type{ padding-bottom: 2rem; }
