@@ -36,7 +36,7 @@ export default function ContactSection() {
 
             if (result.success) {
                 setStatus("success");
-                setFormData({ name: "", email: "", subject: "", message: "" });
+                setFormData({ name: "", email: "", message: "" });
                 // Reset status after 5 seconds
                 setTimeout(() => setStatus("idle"), 5000);
             } else {
