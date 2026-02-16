@@ -21,16 +21,17 @@ export default function Header() {
     const { theme, toggleTheme } = useTheme();
 
     // Determine header appearance based on:
-    // 1. Route: Home page ("/") has a dark hero image, requiring white text initially.
-    //           Inner pages (e.g. /about) have white backgrounds, requiring dark text initially.
-    // 2. Scroll: When scrolled, header becomes solid white (or dark in dark mode) with contrasting text.
+    // 1. Route: Pages with dark hero images need white text initially (Home, Project Detail pages)
+    //           Other pages have light backgrounds, requiring dark text initially.
+    // 2. Scroll: When scrolled, header becomes solid with contrasting text.
 
     const isHomePage = pathname === "/";
+    const isProjectDetailPage = pathname.startsWith("/projects/") && pathname !== "/projects";
+    const hasDarkHero = isHomePage || isProjectDetailPage;
     const isTransparent = !isScrolled;
 
-    // Force white text ONLY when on Home Page AND at the top (Transparent header over dark hero).
-    // In all other cases (Scrolled OR Inner Page), let the Theme Provider handle the transparency/contrast.
-    const useWhiteText = isTransparent && isHomePage;
+    // Force white text when on pages with dark hero AND at the top (Transparent header over dark hero).
+    const useWhiteText = isTransparent && hasDarkHero;
 
     useEffect(() => {
         const handleScroll = () => {

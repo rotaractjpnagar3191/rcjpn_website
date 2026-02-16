@@ -63,16 +63,16 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
             </section>
 
             {/* Filters */}
-            <section className="py-8 bg-[var(--bg-secondary)] border-y border-[var(--border-color)]">
+            <section className="py-4 md:py-8 bg-[var(--bg-secondary)] border-y border-[var(--border-color)]">
                 <div className="container mx-auto px-4 md:px-8">
-                    <div className="flex flex-wrap gap-4 items-center justify-between">
-                        {/* Category Filters */}
-                        <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-col md:flex-row gap-3 md:gap-4 md:items-center md:justify-between">
+                        {/* Category Filters - Horizontal scroll on mobile */}
+                        <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap">
                             {categories.map((cat) => (
                                 <button
                                     key={cat.value}
                                     onClick={() => setSelectedCategory(cat.value)}
-                                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${selectedCategory === cat.value
+                                    className={`px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium rounded-lg transition-all whitespace-nowrap flex-shrink-0 ${selectedCategory === cat.value
                                         ? "bg-[var(--rotary-gold)] text-black shadow-md"
                                         : "bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--rotary-blue)]"
                                         }`}
@@ -83,12 +83,12 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
                         </div>
 
                         {/* Status Filters */}
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 flex-shrink-0">
                             {statuses.map((status) => (
                                 <button
                                     key={status.value}
                                     onClick={() => setSelectedStatus(status.value)}
-                                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${selectedStatus === status.value
+                                    className={`px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium rounded-lg transition-all ${selectedStatus === status.value
                                         ? "bg-[var(--rotary-gold)] text-black shadow-md"
                                         : "bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--rotary-blue)]"
                                         }`}
@@ -198,7 +198,7 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
             {/* Project Detail Modal */}
             {selectedProject && (
                 <div
-                    className="fixed inset-0 z-[100] flex items-center justify-center p-4 min-h-screen box-border"
+                    className="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-4 min-h-screen box-border"
                 >
                     {/* Backdrop */}
                     <div
@@ -206,13 +206,13 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
                         onClick={() => setSelectedProject(null)}
                     />
 
-                    {/* Modal Content */}
+                    {/* Modal Content - Full screen on mobile, centered on desktop */}
                     <div
-                        className="bg-[var(--bg-card)] w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative animate-zoom-in duration-300 z-10 flex flex-col"
+                        className="bg-[var(--bg-card)] w-full md:max-w-4xl h-[95vh] md:h-auto md:max-h-[90vh] overflow-y-auto rounded-t-3xl md:rounded-3xl shadow-2xl relative animate-zoom-in duration-300 z-10 flex flex-col"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Header Image */}
-                        <div className="relative h-64 md:h-80 w-full flex-shrink-0">
+                        <div className="relative h-48 sm:h-64 md:h-80 w-full flex-shrink-0">
                             {selectedProject.cover ? (
                                 <>
                                     <Image
@@ -236,54 +236,60 @@ export default function ProjectsClient({ projects }: ProjectsClientProps) {
                             </button>
 
                             {/* Badge & Title */}
-                            <div className="absolute bottom-6 left-6 right-6">
-                                <div className="flex flex-wrap gap-2 mb-3">
-                                    <span className="px-3 py-1 text-xs font-bold bg-[var(--rotary-gold)] text-black rounded-full shadow-sm">{selectedProject.categoryLabel}</span>
-                                    <span className="px-3 py-1 text-xs font-bold bg-white/20 backdrop-blur-md text-white border border-white/20 rounded-full shadow-sm uppercase tracking-wide">{selectedProject.statusLabel}</span>
+                            <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+                                <div className="flex flex-wrap gap-1.5 md:gap-2 mb-2 md:mb-3">
+                                    <span className="px-2 md:px-3 py-0.5 md:py-1 text-[10px] md:text-xs font-bold bg-[var(--rotary-gold)] text-black rounded-full shadow-sm">{selectedProject.categoryLabel}</span>
+                                    <span className="px-2 md:px-3 py-0.5 md:py-1 text-[10px] md:text-xs font-bold bg-gray-800/80 backdrop-blur-md border border-white/20 rounded-full shadow-sm uppercase tracking-wide" style={{ color: '#ffffff' }}>{selectedProject.statusLabel}</span>
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md leading-tight">{selectedProject.name}</h2>
+                                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight" style={{ color: '#ffffff', textShadow: '0 2px 8px rgba(0,0,0,0.9), 0 4px 16px rgba(0,0,0,0.7)' }}>{selectedProject.name}</h2>
                             </div>
                         </div>
 
                         {/* Body */}
-                        <div className="p-6 md:p-8 space-y-8">
+                        <div className="p-4 md:p-6 lg:p-8 space-y-6 md:space-y-8 flex-1 overflow-y-auto">
                             {/* Stats Grid */}
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-8 border-b border-[var(--border-color)]">
-                                <div className="p-4 bg-[var(--bg-secondary)] rounded-xl text-center">
-                                    <div className="text-2xl font-bold text-[var(--rotary-blue)]">{selectedProject.beneficiaryCount || "-"}</div>
-                                    <div className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold">Beneficiaries</div>
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 pb-6 md:pb-8 border-b border-[var(--border-color)]">
+                                <div className="p-3 md:p-4 bg-[var(--bg-secondary)] rounded-lg md:rounded-xl text-center">
+                                    <div className="text-lg md:text-2xl font-bold text-[var(--rotary-blue)]">{selectedProject.beneficiaryCount || "-"}</div>
+                                    <div className="text-[10px] md:text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold">Beneficiaries</div>
                                 </div>
-                                <div className="p-4 bg-[var(--bg-secondary)] rounded-xl text-center">
-                                    <div className="text-2xl font-bold text-[var(--rotary-gold)]">{selectedProject.volunteerCount || "-"}</div>
-                                    <div className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold">Volunteers</div>
+                                <div className="p-3 md:p-4 bg-[var(--bg-secondary)] rounded-lg md:rounded-xl text-center">
+                                    <div className="text-lg md:text-2xl font-bold text-[var(--rotary-gold)]">{selectedProject.volunteerCount || "-"}</div>
+                                    <div className="text-[10px] md:text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold">Volunteers</div>
                                 </div>
-                                <div className="p-4 bg-[var(--bg-secondary)] rounded-xl text-center">
-                                    <div className="text-2xl font-bold text-[var(--text-primary)]">{selectedProject.volunteerHours || "-"}</div>
-                                    <div className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold">Hours</div>
+                                <div className="p-3 md:p-4 bg-[var(--bg-secondary)] rounded-lg md:rounded-xl text-center">
+                                    <div className="text-lg md:text-2xl font-bold text-[var(--text-primary)]">{selectedProject.volunteerHours || "-"}</div>
+                                    <div className="text-[10px] md:text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold">Hours</div>
                                 </div>
-                                <div className="p-4 bg-[var(--bg-secondary)] rounded-xl text-center">
-                                    <div className="text-md font-bold text-[var(--text-primary)] mt-1">{formatDate(selectedProject.startDate)}</div>
-                                    <div className="text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold mt-1">Date</div>
+                                <div className="p-3 md:p-4 bg-[var(--bg-secondary)] rounded-lg md:rounded-xl text-center">
+                                    <div className="text-sm md:text-md font-bold text-[var(--text-primary)]">{formatDate(selectedProject.startDate)}</div>
+                                    <div className="text-[10px] md:text-xs text-[var(--text-muted)] uppercase tracking-wider font-semibold mt-0.5">Date</div>
                                 </div>
                             </div>
 
                             {/* Description */}
                             <div>
-                                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-3">About the Project</h3>
-                                <div className="prose dark:prose-invert max-w-none text-[var(--text-secondary)] whitespace-pre-wrap leading-relaxed">
+                                <h3 className="text-base md:text-lg font-bold text-[var(--text-primary)] mb-2 md:mb-3">About the Project</h3>
+                                <div className="prose dark:prose-invert max-w-none text-[var(--text-secondary)] text-sm md:text-base whitespace-pre-wrap leading-relaxed">
                                     {selectedProject.description}
                                 </div>
                             </div>
+                        </div>
 
-                            {/* Footer Actions */}
-                            <div className="flex justify-end pt-4 border-t border-[var(--border-color)]">
-                                <Link
-                                    href={`/projects/${selectedProject.slug}`}
-                                    className="btn-secondary text-sm"
-                                >
-                                    Open Full Page
-                                </Link>
-                            </div>
+                        {/* Footer Actions - Sticky on mobile */}
+                        <div className="flex justify-between items-center gap-3 p-4 md:p-6 border-t border-[var(--border-color)] bg-[var(--bg-card)] sticky bottom-0">
+                            <button
+                                onClick={() => setSelectedProject(null)}
+                                className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+                            >
+                                Close
+                            </button>
+                            <Link
+                                href={`/projects/${selectedProject.slug}`}
+                                className="btn-primary text-sm px-4 md:px-6 py-2"
+                            >
+                                View Full Details
+                            </Link>
                         </div>
                     </div>
                 </div>
