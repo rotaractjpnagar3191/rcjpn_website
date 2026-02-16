@@ -80,7 +80,7 @@ export default function AboutPage() {
                             <span className="text-[var(--text-primary)]">About</span>
                         </nav>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mb-6">
                             About <span className="text-gradient">Us</span>
                         </h1>
                         <p className="text-xl text-[var(--text-secondary)] leading-relaxed">
@@ -115,7 +115,7 @@ export default function AboutPage() {
                                 </span>
                             </div>
 
-                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-6">
                                 About Rotaract
                             </h2>
 
@@ -168,7 +168,7 @@ export default function AboutPage() {
                                 </span>
                             </div>
 
-                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-6">
                                 About Rotaract JP Nagar
                             </h2>
 
@@ -228,7 +228,7 @@ export default function AboutPage() {
                                 Our Mission
                             </span>
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
                             Rotary&apos;s Seven <span className="text-gradient">Areas of Focus</span>
                         </h2>
                         <p className="text-[var(--text-secondary)]">
@@ -246,7 +246,7 @@ export default function AboutPage() {
                                 <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${area.color} flex items-center justify-center text-3xl group-hover:scale-110 transition-transform`}>
                                     {area.icon}
                                 </div>
-                                <h3 className="font-semibold text-white mb-2">{area.title}</h3>
+                                <h3 className="font-semibold text-[var(--text-primary)] mb-2">{area.title}</h3>
                                 <p className="text-sm text-[var(--text-muted)]">{area.description}</p>
                             </div>
                         ))}
@@ -259,7 +259,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-radial pointer-events-none" />
 
                 <div className="container mx-auto px-4 md:px-8 text-center relative">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-6">
                         Ready to Make an Impact?
                     </h2>
                     <p className="text-[var(--text-secondary)] text-lg mb-8 max-w-2xl mx-auto">

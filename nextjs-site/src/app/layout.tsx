@@ -102,8 +102,6 @@ const jsonLd = {
 
 import ScrollToTop from "@/components/ui/ScrollToTop";
 
-// ... (existing code)
-
 export default function RootLayout({
   children,
 }: {

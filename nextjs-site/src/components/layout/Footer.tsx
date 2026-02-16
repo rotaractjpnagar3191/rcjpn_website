@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "@/components/providers/ThemeProvider";
 
 const quickLinks = [
     { href: "/about", label: "About Us" },
@@ -43,7 +40,6 @@ const socialLinks = [
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
-    const { theme } = useTheme();
 
     return (
         <footer className="bg-gray-900 text-white border-t border-gray-800">

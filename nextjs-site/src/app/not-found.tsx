@@ -15,7 +15,7 @@ export default function NotFound() {
 
                 {/* Content */}
                 <div className="-mt-16 md:-mt-24 relative">
-                    <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    <h1 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
                         Page Not Found
                     </h1>
                     <p className="text-[var(--text-secondary)] text-lg mb-8">

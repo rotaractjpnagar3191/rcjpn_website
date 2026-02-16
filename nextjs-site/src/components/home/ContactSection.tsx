@@ -6,7 +6,6 @@ export default function ContactSection() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        subject: "",
         message: ""
     });
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
