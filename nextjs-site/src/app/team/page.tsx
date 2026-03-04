@@ -45,11 +45,6 @@ const teamMembers = [
         image: "/images/team/Akshatha_PB.jpeg",
     },
     {
-        name: "Rtr. Aishwarya",
-        role: "Director – Club Service",
-        image: "/images/team/Aishu Gowda1702.jpeg",
-    },
-    {
         name: "Rtr. Girish A R",
         role: "Director – Club Service",
         image: "/images/team/Girish_A_R.jpeg",
@@ -138,6 +133,11 @@ const teamMembers = [
         name: "Rtr. Krishna Daga",
         role: "Chair – Fellowship Group (The Storytellers)",
         image: "/images/team/Krishna Daga.jpg",
+    },
+    {
+        name: "Rtr. Ullas Rao",
+        role: "Chair – Fellowship Group (The Globetrotters)",
+        image: "/images/team/Ullas_Srinivasa.jpeg",
     },
 ];
 
